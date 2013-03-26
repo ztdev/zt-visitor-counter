@@ -1,0 +1,31 @@
+/* settings 24px */
+.ztvc-icon-all,
+.ztvc-icon-month,
+.ztvc-icon-week,
+.ztvc-icon-today,
+.ztvc-icon-yesterday {
+    width: 24px;
+    height: 24px;
+    background: url(settings.png) no-repeat top left;
+    text-indent: -999em;
+}
+
+.ztvc-icon-all {
+    background-position: 0 0;
+}
+
+.ztvc-icon-month {
+    background-position: -48px 0;
+}
+
+.ztvc-icon-week {
+    background-position: -96px 0;
+}
+
+.ztvc-icon-today {
+    background-position: -192px 0;
+}
+
+.ztvc-icon-yesterday {
+    background-position: -288px 0;
+}

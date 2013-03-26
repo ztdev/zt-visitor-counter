@@ -1,0 +1,96 @@
+.ztvc-left {
+    float: left;
+}
+
+.ztvc-visitor-counter {
+    text-align: center;
+    padding: 9px 0;
+    height: auto;
+}
+
+.ztvc-content-counter {
+    padding: 0 4px;
+}
+
+.ztvc-visitor-counter .ztvc-row {
+    height: 25px;
+    margin: 2px;
+}
+
+.ztvc-visitor-counter .txt-right {
+    float: right;
+}
+
+.ztvc-visitor-counter .titles {
+    text-align: left;
+}
+
+.ztvc-space {
+    clear: both;
+    margin: 2px 0;
+}
+
+.ztvc-icon-agent {
+    width: 100%;
+    padding: 4px;
+}
+
+.ztvc-icon-agent .ztvc-column {
+    float: left;
+    /*width: 32%;*/
+    height: 19px;
+    margin-left: 1px;
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+}
+
+.ztvc-count-online {
+    clear: both;
+}
+
+.ztvc-icon-firefox {
+    height: 15px;
+    background: url(../agent/firefox.png) no-repeat top left;
+    text-indent: 20px;
+}
+
+.ztvc-icon-chrome {
+    height: 15px;
+    background: url(../agent/chrome.png) no-repeat top left;
+    text-indent: 20px;
+}
+
+.ztvc-icon-safari {
+    height: 15px;
+    background: url(../agent/safari.png) no-repeat top left;
+    text-indent: 20px;
+}
+
+.ztvc-icon-opera {
+    height: 15px;
+    background: url(../agent/opera.png) no-repeat top left;
+    text-indent: 20px;
+}
+
+.ztvc-icon-msie {
+    height: 15px;
+    background: url(../agent/msie.png) no-repeat top left;
+    text-indent: 20px;
+}
+
+.ztvc-icon-other {
+    height: 15px;
+    background: url(../agent/other.png) no-repeat top left;
+    text-indent: 20px;
+}
+
+.ztvc-icon-forecast {
+    background-position: 0 0;
+    width: 14px;
+    height: 14px;
+    background: url(../images/forecast.png) no-repeat top left;
+    text-indent: -999em;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+    <name>System - ZT Visitor Counter plugin</name>
+    <author>ZooTemplate</author>
+    <creationDate>March 2013</creationDate>
+    <copyright>Copyright (C) 2008 - 2013 http://www.ZooTemplate.com. All rights reserved.</copyright>
+    <authorEmail>support@ZooTemplate.com</authorEmail>
+    <authorUrl>www.ZooTemplate.com</authorUrl>
+    <version>1.0.0</version>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <description>This ZT Visitor Counter plugin must be enabled to work with ZT Visitor Counter module</description>
+
+    <files>
+        <filename plugin="zt_visitor_counter">zt_visitor_counter.php</filename>
+        <filename>browser.php</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <filename>zt_visitor_counter.html</filename>
+    </files>
+
+</extension>

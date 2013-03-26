@@ -1,4 +1,4 @@
-zt_visitor_counter
+ZT Visitor Counter
 ==================
 
-ZT Visitor Counter Module &amp; Plugin
+This is the visitor counter module & plugin written by ZooTemplate.com

@@ -1,0 +1,57 @@
+/* default */
+.digit-0,
+.digit-1,
+.digit-2,
+.digit-3,
+.digit-4,
+.digit-5,
+.digit-6,
+.digit-7,
+.digit-8,
+.digit-9 {
+    width: 17px;
+    height: 26px;
+    background: url(style7.gif) no-repeat top left;
+    text-indent: -999em;
+    display: inline-block;
+}
+
+.digit-0 {
+    background-position: -3px 0;
+}
+
+.digit-1 {
+    background-position: -19px 0;
+}
+
+.digit-2 {
+    background-position: -34px 0;
+}
+
+.digit-3 {
+    background-position: -52px 0;
+}
+
+.digit-4 {
+    background-position: -72px 0;
+}
+
+.digit-5 {
+    background-position: -90px 0;
+}
+
+.digit-6 {
+    background-position: -110px 0;
+}
+
+.digit-7 {
+    background-position: -129px 0;
+}
+
+.digit-8 {
+    background-position: -148px 0;
+}
+
+.digit-9 {
+    background-position: -169px 0;
+}

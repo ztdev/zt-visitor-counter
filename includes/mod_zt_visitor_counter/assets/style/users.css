@@ -1,0 +1,31 @@
+/* users 14px */
+.ztvc-icon-all,
+.ztvc-icon-month,
+.ztvc-icon-week,
+.ztvc-icon-today,
+.ztvc-icon-yesterday {
+    width: 14px;
+    height: 14px;
+    background: url(users.png) no-repeat top left;
+    text-indent: -999em;
+}
+
+.ztvc-icon-all {
+    background-position: 0 0;
+}
+
+.ztvc-icon-month {
+    background-position: -28px 0;
+}
+
+.ztvc-icon-week {
+    background-position: -56px 0;
+}
+
+.ztvc-icon-today {
+    background-position: -112px 0;
+}
+
+.ztvc-icon-yesterday {
+    background-position: -168px 0;
+}

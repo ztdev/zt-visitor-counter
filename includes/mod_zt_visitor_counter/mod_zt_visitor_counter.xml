@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+        type="module"
+        version="2.5"
+        client="site"
+        method="upgrade">
+    <name>ZT Visitor Counter module</name>
+    <author>ZooTemplate</author>
+    <creationDate>March, 2013</creationDate>
+    <copyright>Copyright (C) 2008 - 2013 http://www.ZooTemplate.com. All rights reserved.</copyright>
+    <license>GNU/GPL</license>
+    <authorEmail>support@ZooTemplate.com</authorEmail>
+    <authorUrl>www.ZooTemplate.com</authorUrl>
+    <version>1.0.0</version>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <description>ZT_VISITOR_COUNTER_DESCRIPTION</description>
+
+    <files>
+        <filename module="mod_zt_visitor_counter">mod_zt_visitor_counter.php</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <filename>mod_zt_visitor_counter.html</filename>
+        <folder>assets</folder>
+        <folder>elements</folder>
+        <folder>languages</folder>
+        <folder>tmpl</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">languages/en-GB.mod_zt_visitor_counter.ini</language>
+        <language tag="en-GB">languages/en-GB.mod_zt_visitor_counter.sys.ini</language>
+    </languages>
+
+    <config addfieldpath="/modules/mod_zt_visitor_counter/elements/">
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix"
+                       description="PARAMMODULECLASSSUFFIX"/>
+
+                <field name="width" type="widthtype" default="100" label="Width" class="inputbox" size="1"
+                       description=""/>
+
+                <field name="digit_style" type="filelist" default="default" hide_default="true" hide_none="true"
+                       label="MOD_ZT_VISITOR_COUNTER_DIGIT_STYLE_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_DIGIT_STYLE_DESC"
+                       directory="modules/mod_zt_visitor_counter/assets/digit/" filter="[^\s]+(?i)(\.css)$" exclude=""
+                       stripext=".css"/>
+                <field name="module_style" type="filelist" default="default" hide_default="true" hide_none="true"
+                       label="MOD_ZT_VISITOR_COUNTER_STYLE_LABEL" description="MOD_ZT_VISITOR_COUNTER_STYLE_DESC"
+                       directory="modules/mod_zt_visitor_counter/assets/style/" filter="[^\s]+(?i)(\.css)$" exclude=""
+                       stripext=".css"/>
+
+                <field name="showDigit" type="radio" default="1" label="MOD_ZT_VISITOR_COUNTER_SHOW_DIGIT_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_SHOW_DIGIT_DESC" class="btn-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="minDigits" type="text" default="7" label="MOD_ZT_VISITOR_COUNTER_MIN_DIGITS_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_MIN_DIGITS_DESC"/>
+                <field name="showIcons" type="radio" default="1" label="MOD_ZT_VISITOR_COUNTER_SHOW_ICONS_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_SHOW_ICONS_DESC" class="btn-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="showTitles" type="radio" default="1" label="MOD_ZT_VISITOR_COUNTER_SHOW_TITLES_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_SHOW_TITLES_DESC" class="btn-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="showTotals" type="radio" default="1" label="MOD_ZT_VISITOR_COUNTER_SHOW_TOTALS_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_SHOW_TOTALS_DESC" class="btn-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="showIp" type="text" default="Your IP:" label="MOD_ZT_VISITOR_COUNTER_SHOW_YOUR_IP_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_SHOW_YOUR_IP_DESC"/>
+                <field name="showOnline" type="radio" default="1" label="MOD_ZT_VISITOR_COUNTER_SHOW_ONLINE_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_SHOW_ONLINE_DESC" class="btn-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="showAgent" type="radio" default="1" label="MOD_ZT_VISITOR_COUNTER_SHOW_USER_AGENT_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_SHOW_USER_AGENT_DESC" class="btn-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="duration" type="text" default="15" label="MOD_ZT_VISITOR_COUNTER_DURATION_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_DURATION_DESC"/>
+                <field name="showGuestOnline" type="radio" default="1"
+                       label="MOD_ZT_VISITOR_COUNTER_SHOW_GUEST_ONLINE_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_SHOW_GUEST_ONLINE_DESC" class="btn-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="showMemberOnline" type="radio" default="1"
+                       label="MOD_ZT_VISITOR_COUNTER_SHOW_MEMBER_ONLINE_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_SHOW_MEMBER_ONLINE_DESC" class="btn-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="showAllOnline" type="radio" default="1"
+                       label="MOD_ZT_VISITOR_COUNTER_SHOW_ALL_ONLINE_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_SHOW_ALL_ONLINE_DESC" class="btn-group">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field name="initialValue" type="text" default="0" label="MOD_ZT_VISITOR_COUNTER_INITIAL_VALUE_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_INITIAL_VALUE_DESC"/>
+
+                <field name="digit_style" type="filelist" default="default" hide_default="true"
+                       label="MOD_ZT_VISITOR_COUNTER_DIGIT_STYLE_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_DIGIT_STYLE_DESC"
+                       directory="modules/mod_zt_visitor_counter/assets/digit/"
+                       filter="[^\s]+(?i)(\.css)$" exclude="" stripext=".css"/>
+                <field name="module_style" type="filelist" default="default" hide_default="true"
+                       label="MOD_ZT_VISITOR_COUNTER_MODULES_STYLE_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_MODULES_STYLE_DESC"
+                       directory="modules/mod_zt_visitor_counter/assets/style/"
+                       filter="[^\s]+(?i)(\.css)$" exclude="" stripext=".css"/>
+                <field name="today" type="text" default="Today" label="MOD_ZT_VISITOR_COUNTER_SHOW_TODAY_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_SHOW_TODAY_DESC" size="35"/>
+                <field name="yesterday" type="text" default="Yesterday"
+                       label="MOD_ZT_VISITOR_COUNTER_SHOW_YESTERDAY_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_SHOW_YESTERDAY_DESC" size="35"/>
+                <field name="thisWeek" type="text" default="This Week"
+                       label="MOD_ZT_VISITOR_COUNTER_SHOW_THIS_WEEK_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_SHOW_THIS_WEEK_DESC" size="35"/>
+                <field name="lastWeek" type="text" default="Last Week"
+                       label="MOD_ZT_VISITOR_COUNTER_SHOW_LAST_WEEK_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_SHOW_LAST_WEEK_DESC" size="35"/>
+                <field name="thisMonth" type="text" default="This Month"
+                       label="MOD_ZT_VISITOR_COUNTER_SHOW_THIS_MONTH_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_SHOW_THIS_MONTH_DESC" size="35"/>
+                <field name="lastMonth" type="text" default="Last Month"
+                       label="MOD_ZT_VISITOR_COUNTER_SHOW_LAST_MONTH_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_SHOW_LAST_MONTH_DESC" size="35"/>
+                <field name="all" type="text" default="All days" label="MOD_ZT_VISITOR_COUNTER_SHOW_ALL_DAYS_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_SHOW_ALL_DAYS_DESC" size="35"/>
+                <field name="foreCast" type="text" default="Forecast Today"
+                       label="MOD_ZT_VISITOR_COUNTER_SHOW_FORECAST_TODAY_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_SHOW_FORECAST_TODAY_DESC" size="35"/>
+                <field name="firstDay" type="list" default="0" label="MOD_ZT_VISITOR_COUNTER_FIRSTDAY_LABEL"
+                       description="MOD_ZT_VISITOR_COUNTER_FIRSTDAY_DESC">
+                    <option value="0">SUNDAY</option>
+                    <option value="1">MONDAY</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field
+                        name="cache"
+                        type="radio"
+                        default="0"
+                        label="COM_MODULES_FIELD_CACHING_LABEL"
+                        description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option
+                            value="1">JGLOBAL_USE_GLOBAL
+                    </option>
+                    <option
+                            value="0">COM_MODULES_FIELD_VALUE_NOCACHING
+                    </option>
+                </field>
+                <field
+                        name="cache_time"
+                        type="text"
+                        default="900"
+                        label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                        description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+                <field
+                        name="cachemode"
+                        type="hidden"
+                        default="static">
+                    <option
+                            value="static"></option>
+                </field>
+                <field name="zt-copyright" type="hidden"
+                       default="ICAgIDxkaXYgY2xhc3M9Inp0dmMtY29weXJpZ2h0Ij48YSBocmVmPSJodHRwOi8vd3d3Lnpvb3RlbXBsYXRlLmNvbS8iIHRpdGxlPSJWaXNpdG9yIENvdW50ZXIiIHRhcmdldD0iX2JsYW5rIj5WaXNpdG9yDQogICAgICAgICAgICBDb3VudGVyPC9hPjwvZGl2Pg0KPC9kaXY+"/>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
