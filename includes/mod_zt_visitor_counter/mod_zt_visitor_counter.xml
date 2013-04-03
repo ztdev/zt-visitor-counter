@@ -19,7 +19,7 @@
         <filename module="mod_zt_visitor_counter">mod_zt_visitor_counter.php</filename>
         <filename>helper.php</filename>
         <filename>index.html</filename>
-        <filename>mod_zt_visitor_counter.html</filename>
+        <filename>mod_zt_visitor_counter.xml</filename>
         <folder>assets</folder>
         <folder>elements</folder>
         <folder>languages</folder>
