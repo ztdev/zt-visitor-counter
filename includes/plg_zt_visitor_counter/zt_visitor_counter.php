@@ -6,6 +6,9 @@
  * @license PHP files are GNU/GPL
  **/
 
+// no direct access
+defined('_JEXEC') or die;
+
 defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
 
 require_once(dirname(__FILE__) . DS . 'helper.php');
